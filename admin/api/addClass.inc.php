@@ -7,7 +7,7 @@ $college = $_POST['college'];
 $subject = $_POST['subject'];
 $status = "Open";
 
-$sql = "INSERT INTO classes (class_subject, class_teacher, class_code, class_college, status) VALUES ('$subject', '$teacher', '$classCode', '$college', '$status')";
+$sql = "INSERT INTO classes (class_subject, class_teacher, class_code, class_college, class_status) VALUES ('$subject', '$teacher', '$classCode', '$college', '$status')";
 $addC = mysqli_query($conn, $sql);
     if($addC){
         header("Location: ../class.php");

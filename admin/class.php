@@ -2,7 +2,7 @@
  define('TITLE', "Manage Classes");
  include '../assets/layouts/header.php';
  if(! isset($_SESSION['auth'])){
-    header("Location: ../login");
+    header("Location: ../login"); 
     exit();
 } 
 $teacher = "teacher";
