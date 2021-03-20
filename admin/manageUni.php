@@ -11,8 +11,13 @@
         <div class="col-lg-3 col-sm-6">
             <div class="card-box bg-blue">
                 <div class="inner">
-                    <h3> Counter </h3>
-                    <p>Colleges </p>
+                    <h3> Colleges
+                    </h3>
+                    <p><?php 
+                    $query1= mysqli_query($conn,"SELECT count(*) AS 'countC' FROM college");
+                            $row= mysqli_fetch_array($query1);
+                            $count_S = $row['countC'];
+                            echo $row["countC"];?> </p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-university" aria-hidden="true"></i>
@@ -25,8 +30,12 @@
         <div class="col-lg-3 col-sm-6">
             <div class="card-box bg-green">
                 <div class="inner">
-                    <h3> counter </h3>
-                    <p> Maijors </p>
+                    <h3> Maijors </h3>
+                    <p> <?php 
+                    $query2= mysqli_query($conn,"SELECT count(*) AS 'countM' FROM maijor");
+                            $row= mysqli_fetch_array($query2);
+                            $count_S = $row['countM'];
+                            echo $row["countM"];?> </p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
@@ -38,8 +47,12 @@
         <div class="col-lg-3 col-sm-6">
             <div class="card-box bg-orange">
                 <div class="inner">
-                    <h3> 5464 </h3>
-                    <p> Subjects </p>
+                    <h3> Subjects </h3>
+                    <p> <?php 
+                    $query3= mysqli_query($conn,"SELECT count(*) AS 'countS' FROM subject");
+                            $row= mysqli_fetch_array($query3);
+                            $count_S = $row['countS'];
+                            echo $row["countS"];?> </p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-book" aria-hidden="true"></i>
@@ -50,8 +63,12 @@
         <div class="col-lg-3 col-sm-6">
             <div class="card-box bg-red">
                 <div class="inner">
-                    <h3> 723 </h3>
-                    <p> Classes </p>
+                    <h3> Classes </h3>
+                    <p> <?php 
+                    $query4= mysqli_query($conn,"SELECT count(*) AS 'countR' FROM classes");
+                            $row= mysqli_fetch_array($query4);
+                            $count_S = $row['countR'];
+                            echo $row["countR"];?> </p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-users"></i>

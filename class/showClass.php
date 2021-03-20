@@ -36,13 +36,16 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
             <div class="row">
                 <!-- Left column-->
                 <div class="col-md-7 col-lg-8">
-                    <form class="card ng-pristine ng-valid">
-                        <div class="card-divider"></div>
-                        <h5 class="card-heading pb0">
+                    <form class="card ng-pristine ng-valid"> 
+                    <h5 class="card-heading pb0">
                             About Class
                         </h5>
                         <div class="card-body">
                             <p class="ng-scope ng-binding editable"><?php echo $class['aboutClass']; ?></p>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/<?php echo $class['class_video']; ?>" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                         </div>
                         <div class="card-divider"></div>
 
